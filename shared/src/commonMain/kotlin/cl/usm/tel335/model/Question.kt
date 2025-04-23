@@ -1,5 +1,6 @@
 package cl.usm.tel335.model
 
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 val questions = mutableListOf(
@@ -22,7 +23,10 @@ val questions = mutableListOf(
 
 @Serializable
 data class Question(
+    @SerialName("id")
     val id: Long = -1,
+    @SerialName("text")
     val text: String,
-    val category: String
+    @SerialName("category")
+    val category: String //TODO: crear clase category
 )

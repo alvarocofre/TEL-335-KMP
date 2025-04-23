@@ -1,3 +1,10 @@
+TEL 335 - Diseño de applicaciones web y móviles
+
+Clase 06:
+- Se arreglan un par de cosas en los build.gradlew
+- Se agrega sqlDelight al server
+- Se 
+
 This is a Kotlin Multiplatform project targeting Android, iOS, Server.
 
 * `/composeApp` is for code that will be shared across your Compose Multiplatform applications.

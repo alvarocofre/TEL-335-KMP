@@ -41,6 +41,14 @@ kotlin {
     }
 }
 
+sqldelight {
+    databases {
+        create("Database") {
+            packageName.set("cl.usm.tel335.database")
+        }
+    }
+}
+
 android {
     namespace = "cl.usm.tel335.shared"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
