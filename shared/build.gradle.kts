@@ -4,7 +4,8 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
-    id("org.jetbrains.kotlin.plugin.serialization") version "2.1.20"
+    alias(libs.plugins.kotlinxSerialization)
+    alias(libs.plugins.sqldelight)
 }
 
 kotlin {
@@ -30,7 +31,12 @@ kotlin {
     
     sourceSets {
         commonMain.dependencies {
-            implementation("io.ktor:ktor-serialization-kotlinx-json:3.1.1")
+            implementation(libs.ktor.serialization.kotlinx.json)
+            implementation(libs.kotlinx.coroutines.core)
+            implementation(libs.ktor.client.core)
+            implementation(libs.ktor.client.content.negotiation)
+            implementation(libs.runtime)
+            implementation(libs.koin.core)
         }
     }
 }
