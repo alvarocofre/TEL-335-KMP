@@ -1,6 +1,7 @@
 package cl.usm.tel335
 
-import cl.usm.tel335.model.questions
+import cl.usm.tel335.data.AppDatabase
+import cl.usm.tel335.data.DriverFactory
 import io.ktor.http.HttpStatusCode
 import io.ktor.serialization.kotlinx.json.json
 import io.ktor.server.application.*
@@ -19,12 +20,15 @@ fun Application.module() {
 
     configureSerialization()
 
+    val db = AppDatabase(DriverFactory())
+
     routing {
         get("/") {
             call.respondText("Hola curso de TEL335 :) !!")
         }
 
         get("/questions") {
+            val questions = db.getAllQuestions()
             call.respond(status = HttpStatusCode.OK, questions)
         }
     }

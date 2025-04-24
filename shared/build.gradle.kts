@@ -35,8 +35,11 @@ kotlin {
             implementation(libs.kotlinx.coroutines.core)
             implementation(libs.ktor.client.core)
             implementation(libs.ktor.client.content.negotiation)
-            implementation(libs.runtime)
             implementation(libs.koin.core)
+            implementation(libs.sqldelight.runtime)
+        }
+        sourceSets.jvmMain.dependencies {
+            implementation(libs.sqldelight.server.driver)
         }
     }
 }
