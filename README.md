@@ -2,8 +2,10 @@ TEL 335 - Diseño de applicaciones web y móviles
 
 Clase 06:
 - Se arreglan un par de cosas en los build.gradlew
-- Se agrega sqlDelight al server
-- Se 
+- Se agrega sqlDelight al server (fixeado problema de plugin)
+- Se crea una tabla de ejemplo "Question"
+- Se agrega DriverFactory de la bd
+- Se agrega un ejemplo de llamda a la bd con un GET ("/questions")
 
 This is a Kotlin Multiplatform project targeting Android, iOS, Server.
 

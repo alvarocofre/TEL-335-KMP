@@ -18,7 +18,7 @@ ktor = "3.1.1"
 logback = "1.5.17"
 coroutinesVersion = "1.7.3"
 koin = "3.5.3"
-sqlDelight = "2.0.1"
+sqlDelight = "2.0.2" # it's necessary use the same version that the plugin
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
